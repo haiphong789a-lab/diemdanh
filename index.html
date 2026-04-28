@@ -6,14 +6,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hệ thống điểm danh</h1>
 
-    <input type="text" id="name" placeholder="Nhập tên nhân viên">
-    <button onclick="checkIn()">Điểm danh</button>
+<h1>Hệ thống điểm danh</h1>
 
-    <h2>Danh sách đã điểm danh:</h2>
-    <ul id="list"></ul>
+<input type="text" id="name" placeholder="Nhập tên">
 
-    <script src="script.js"></script>
+<select id="status">
+    <option value="present">Có mặt</option>
+    <option value="absent">Vắng</option>
+</select>
+
+<input type="text" id="reason" placeholder="Lý do vắng">
+
+<br><br>
+
+<button onclick="checkIn()">Xác nhận</button>
+<button onclick="clearAll()" class="danger">Xoá tất cả</button>
+
+<h2>Danh sách:</h2>
+<ul id="list"></ul>
+
+<script src="script.js"></script>
 </body>
 </html>
